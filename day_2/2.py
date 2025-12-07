@@ -1,18 +1,19 @@
 # Day 1 problem 2
 
 def id_is_invalid(id):
-    length = len(id)
     id = str(id)
-    bool = False
-    for index in range(1, length//2 + 1):
-        if id[:index] == id[index:]:
-
+    length = len(id)
+    
+    for i in range(1, length//2 + 1):
+        substring = id[:i]
+        if substring * (length//i) == id:
+            return True
+    else:
+        return False
 
 def main():
-
     f = open("day_2/input.txt").readline()
     ranges = f.split(',')
-
     invalid_ids = []
 
     for ranges_element in ranges:
