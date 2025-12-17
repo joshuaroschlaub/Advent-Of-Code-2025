@@ -2,7 +2,7 @@
 
 def id_is_invalid(id):
     id = str(id)
-    return id[:int(len(id)/2)] == id[int(len(id)/2):]
+    return id[:int(len(id)//2)] == id[int(len(id)//2):]
 
 def main():
 
